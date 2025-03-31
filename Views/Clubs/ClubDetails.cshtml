@@ -1,0 +1,46 @@
+﻿@model Clubmates.web.Models.ClubsViewModel.CustomerClubViewModel
+
+@{
+    ViewData["Title"]= "Club Details";
+    ViewData["ClubName"]=Model.ClubName;
+    // Layout="~/Views/Shared/_ClubLayout.cshtml";
+}
+<div class="form-container">
+    @if (Model!=null)
+    {
+        <div>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ClubId</th>
+                        <th>ClubName</th>
+                        <th>ClubEmail</th>
+                        <th>ClubManagerEmail</th>
+                        <th>ClubRules</th>
+                        <th>Club Type</th>
+                        <th>ClubDescription</th>
+                    </tr>
+                </thead>
+       
+                    <tr>
+                        <td>@Model.ClubId</td>
+                        <td>@Model.ClubName</td>
+                        <td>@Model.ClubEmail</td>
+                        <td>@Model.ClubManagerEmail</td>
+                        <td>@Model.ClubRules</td>
+                        <td>@Model.ClubType</td>
+                        <td>@Model.ClubDescription</td>
+           
+                    </tr>
+                
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info" role="alert">
+            No Details present
+        </div>
+    }
+   
+</div>
